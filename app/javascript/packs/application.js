@@ -8,6 +8,8 @@
 //= require jquery_ujs
 //= require bootstrap
 
+require("packs/script.js")
+
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
