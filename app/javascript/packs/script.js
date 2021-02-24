@@ -86,6 +86,4 @@
     pauseOnHover: false
   });
   $('.hero-slider').slickAnimation();
-
-
 })(jQuery);
