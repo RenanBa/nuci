@@ -11,7 +11,7 @@
           <div class="col-md-4 col-xs-12 col-sm-4">
             <!-- Site Logo -->
             <div class="logo text-center">
-              <a href="https://instagram.com/nucibarbosa?igshid=17wl5pls4qjoc">
+              <%= link_to(root_path) do %>
                 <!-- replace logo here -->
                 <svg width="135px" height="29px" viewBox="0 0 155 29" version="1.1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -24,7 +24,7 @@
                     </g>
                   </g>
                 </svg>
-              </a>
+              <% end  %>
             </div>
           </div>
 
@@ -110,7 +110,7 @@
 <section class="menu">
   <nav class="navbar navigation">
     <div class="container">
-      <!-- <div class="navbar-header">
+      <div class="navbar-header">
         <h2 class="menu-title">Main Menu</h2>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
           aria-expanded="false" aria-controls="navbar">
@@ -120,7 +120,7 @@
           <span class="icon-bar"></span>
         </button>
 
-      </div> --><!-- / .navbar-header -->
+      </div> <!-- / .navbar-header -->
 
       <!-- Navbar Links -->
       <div id="navbar" class="navbar-collapse collapse text-center">
