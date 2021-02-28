@@ -2167,89 +2167,89 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   bottom: 0;
 }
 
-.bg-coming-soon {
-  background: url("coming-soon-bg.jpg");
-  background-size: cover;
-  height: 100vh;
-}
+// .bg-coming-soon {
+//   background: url("coming-soon-bg.jpg");
+//   background-size: cover;
+//   height: 100vh;
+// }
 
 .bg-brand-identity {
   background-image: url("brand-identity-bg.jpg");
   background-repeat: no-repeat;
 }
 
-.coming-soon {
-  color: #fff;
-  padding: 150px 0;
-}
+// .coming-soon {
+//   color: #fff;
+//   padding: 150px 0;
+// }
 
-.coming-soon .block h1 {
-  font-size: 25px;
-  line-height: 40px;
-  font-weight: 400;
-}
+// .coming-soon .block h1 {
+//   font-size: 25px;
+//   line-height: 40px;
+//   font-weight: 400;
+// }
 
-.coming-soon .block p {
-  color: #fff;
-  margin-top: 20px;
-  font-size: 12px;
-}
+// .coming-soon .block p {
+//   color: #fff;
+//   margin-top: 20px;
+//   font-size: 12px;
+// }
 
-.coming-soon .block .count-down .syotimer-cell {
-  width: 25%;
-  display: inline-block;
-}
+// .coming-soon .block .count-down .syotimer-cell {
+//   width: 25%;
+//   display: inline-block;
+// }
 
-.coming-soon .block .count-down .syotimer-cell .syotimer-cell__value {
-  font-size: 80px;
-  line-height: 80px;
-  text-align: center;
-  position: relative;
-  font-weight: bold;
-}
+// .coming-soon .block .count-down .syotimer-cell .syotimer-cell__value {
+//   font-size: 80px;
+//   line-height: 80px;
+//   text-align: center;
+//   position: relative;
+//   font-weight: bold;
+// }
 
-.coming-soon .block .count-down .syotimer-cell .syotimer-cell__unit {
-  font-weight: normal;
-}
+// .coming-soon .block .count-down .syotimer-cell .syotimer-cell__unit {
+//   font-weight: normal;
+// }
 
-@media (max-width: 768px) {
-  .coming-soon .block .count-down ul li {
-    font-size: 50px;
-  }
-}
+// @media (max-width: 768px) {
+//   .coming-soon .block .count-down ul li {
+//     font-size: 50px;
+//   }
+// }
 
-@media (max-width: 480px) {
-  .coming-soon .block .count-down ul li {
-    font-size: 50px;
-  }
-}
+// @media (max-width: 480px) {
+//   .coming-soon .block .count-down ul li {
+//     font-size: 50px;
+//   }
+// }
 
-@media (max-width: 400px) {
-  .coming-soon .block .count-down ul li {
-    font-size: 40px;
-  }
-}
+// @media (max-width: 400px) {
+//   .coming-soon .block .count-down ul li {
+//     font-size: 40px;
+//   }
+// }
 
-.coming-soon .block .count-down ul li:before {
-  content: ":";
-  font-size: 20pt;
-  opacity: 0.7;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-}
+// .coming-soon .block .count-down ul li:before {
+//   content: ":";
+//   font-size: 20pt;
+//   opacity: 0.7;
+//   position: absolute;
+//   right: 0px;
+//   top: 0px;
+// }
 
-.coming-soon .block .count-down ul li:last-child:before {
-  content: '';
-}
+// .coming-soon .block .count-down ul li:last-child:before {
+//   content: '';
+// }
 
-.coming-soon .block .count-down div:after {
-  content: " " attr(data-interval-text);
-  font-size: 20px;
-  font-weight: normal;
-  text-transform: capitalize;
-  display: block;
-}
+// .coming-soon .block .count-down div:after {
+//   content: " " attr(data-interval-text);
+//   font-size: 20px;
+//   font-weight: normal;
+//   text-transform: capitalize;
+//   display: block;
+// }
 
 .account .block {
   background-color: #fff;
