@@ -8,7 +8,6 @@
 //= require jquery_ujs
 //= require bootstrap
 
-require("jquery")
 require("packs/script.js")
 
 import Rails from "@rails/ujs"
