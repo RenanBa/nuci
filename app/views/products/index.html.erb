@@ -83,11 +83,11 @@
               <div class="product-item">
                 <div class="product-thumb">
                   <span class="bage">Sale</span>
-                  <%= image_tag(image_path("shop/products/product-3.jpg"), :class => "img-responsive", :alt => "product-img") %>
+                  <%= image_tag(image_path(product.image_url), :class => "img-responsive", :alt => "product-img") %>
                   <div class="preview-meta">
                     <ul>
                       <li>
-                        <span data-id="<%= product.image_url %>" data-toggle="modal" data-target="#product-modal">
+                        <span data-id="<%= product.image_url %>" data-toggle="modal" data-target="#product-modal-<%= product.id %>">
                           <i class="tf-ion-ios-search-strong"></i>
                         </span>
                       </li>
@@ -107,7 +107,7 @@
               </div>
             </div>
             <!-- Modal -->
-            <div class="modal product-modal fade" id="product-modal">
+            <div class="modal product-modal fade" id="product-modal-<%= product.id %>">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <i class="tf-ion-close"></i>
               </button>
@@ -117,7 +117,7 @@
                     <div class="row">
                       <div class="col-md-8 col-sm-6 col-xs-12">
                         <div class="modal-image">
-                          <%= image_tag(image_path("/assets/"+product.image_url), :class => "img-responsive", :alt => "modal-product-image") %>
+                          <%= image_tag(image_path(product.image_url), :class => "img-responsive", :alt => "product-img") %>
                         </div>
                       </div>
                       <div class="col-md-4 col-sm-6 col-xs-12">

@@ -6,16 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+item = 1
 5.times {
-  product = Product.create(
-    name: "Neckless",
-    size: "M",
-    price: 5.0,
-    quantity: 3,
-    color: "Red",
-    description: "Product created on seed file for testing purpose",
-    rating: 8,
-    image_url: "images/shop/products/product-1.jpg",
-    category_id: "Jewe"
+    product = Product.create(
+        name: "Neckless",
+        size: "M",
+        price: 5.0,
+        quantity: 3,
+        color: "Red",
+        description: "Product created on seed file for testing purpose",
+        rating: 8,
+        image_url: "shop/products/product-"+item.to_s+".jpg",
+        category_id: "Jewellery"
     )
+    item = item.to_i + 1
 }
