@@ -1319,23 +1319,23 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   font-weight: 200;
 }
 
-.single-product .product-pagination li {
+.single-product .product-update li {
   display: inline-block;
   margin: 0 8px;
 }
 
-.single-product .product-pagination li + li:before {
+.single-product .product-update li + li:before {
   padding: 0 8px 0 0;
   color: #ccc;
   content: "/\00a0";
 }
 
-.single-product .product-pagination li a {
+.single-product .product-update li a {
   color: #000;
   font-weight: 200;
 }
 
-.single-product .product-pagination li a i {
+.single-product .product-update li a i {
   vertical-align: middle;
 }
 
