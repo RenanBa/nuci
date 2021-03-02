@@ -1,0 +1,121 @@
+<div class="container">
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+      <ul>
+      <% @product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <ol class="breadcrumb">
+        <li><%= link_to "Home", root_path %>&nbsp;/&nbsp;</li>
+        <li><%= link_to "Shop", products_path %>&nbsp;/&nbsp;</li>
+        <li class="active">Single Product</li>
+      </ol>
+    </div>
+    <!-- VALIDATE USER TO ACCESS THIS BLOCK -->
+    <div class="col-md-6">
+      <ol class="product-update text-right">
+        <li>
+          <%= link_to @product do %>
+            <i class="tf-ion-ios-arrow-back"></i> Back
+          <% end %>
+        </li>
+      </ol>
+    </div>
+    <!-- END OF VALIDATE BLOCK -->
+  </div>
+
+
+
+  <div class="row mt-20">
+    <div class="col-md-5">
+      <div class="single-product-slider">
+        <div id='carousel-custom' class='carousel slide' data-ride='carousel'>
+          <div class='carousel-outer'>
+            <!-- me art lab slider -->
+            <div class='carousel-inner '>
+              <div class='item active'>
+                <%= image_tag(image_path(@product.image_url)) %>
+              </div>
+              <div class="form-group">
+                <strong>Upload Image:</strong>
+                <%=f.file_field :image_url %>
+              </div>
+              <!-- <div class='item'>
+                <img src='images/shop/single-products/product-2.jpg' alt='' data-zoom-image="images/shop/single-products/product-2.jpg" />
+              </div>
+              <div class='item'>
+                <img src='images/shop/single-products/product-3.jpg' alt='' data-zoom-image="images/shop/single-products/product-3.jpg" />
+              </div> -->
+            </div>
+          </div>
+
+          <!-- thumb -->
+          <!-- <ol class='carousel-indicators mCustomScrollbar meartlab'>
+            <li data-target='#carousel-custom' data-slide-to='6'>
+              <img src='images/shop/single-products/product-7.jpg' alt='' />
+            </li>
+          </ol> -->
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div class="single-product-details">
+        <h2><%= f.text_field :name, placeholder: "Product Name", class: "form-control" %></h2>
+
+        <p class="product-price"><%= f.text_field :price, placeholder: "Price" %></p>
+
+        <p class="product-description mt-20">
+          <%= f.text_area :description, placeholder: "Product description", class: "form-control" %>
+        </p>
+        <div class="color-swatches">
+          <span>color:</span>
+          <%= f.text_field :color, placeholder: "Color" %>
+          <ul>
+            <li>
+              <a href="#!" class="swatch-violet"></a>
+            </li>
+            <li>
+              <a href="#!" class="swatch-black"></a>
+            </li>
+            <li>
+              <a href="#!" class="swatch-cream"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="product-size">
+          <span>Size:</span>
+          <%= f.text_field :size, placeholder: "size", class: "form-control"%>
+          <p>S - M - L - XL</p>
+        </div>
+        <div class="product-quantity">
+          <span>Quantity:</span>
+          <div class="product-quantity-slider">
+            <%= f.text_field :quantity, placeholder: "Quantity", class: "form-control"%>
+          </div>
+        </div>
+        <div class="product-quantity">
+          <span>Category_id:</span>
+          <div class="product-quantity-slider">
+            <%= f.text_field :category_id, placeholder: "category_id"%>
+          </div>
+        </div>
+        <div class="product-quantity">
+          <%= f.submit class: "btn btn-success" %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<% end %>
+</div>
