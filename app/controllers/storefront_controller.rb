@@ -1,5 +1,5 @@
 class StorefrontController < ApplicationController
   def all_items
-   @products = Product.all
+    @products = Product.all
   end
 end
