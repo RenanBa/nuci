@@ -9,25 +9,27 @@
         </ol>
       </div>
       <!-- VALIDATE USER TO ACCESS THIS BLOCK -->
-      <div class="col-md-6">
-        <ol class="product-update text-right">
-          <li>
-            <%= link_to edit_product_path(@product) do %>
-              <i class="tf-ion-edit"></i> Edit
-            <% end %>
-          </li>
-          <li>
-            <%= link_to new_product_path do %>
-              <i class="tf-ion-plus-round"></i> New Product
-            <% end %>
-          </li>
-          <li>
-            <%= link_to @product, method: :delete, data: { confirm: 'Ara you sure?' } do %>
-              <i class="tf-ion-android-delete"></i> Delete
-            <% end %>
-          </li>
-        </ol>
-      </div>
+      <% if can? :edit, @product %>
+        <div class="col-md-6">
+          <ol class="product-update text-right">
+            <li>
+              <%= link_to edit_product_path(@product) do %>
+                <i class="tf-ion-edit"></i> Edit
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_product_path do %>
+                <i class="tf-ion-plus-round"></i> New Product
+              <% end %>
+            </li>
+            <li>
+              <%= link_to @product, method: :delete, data: { confirm: 'Ara you sure?' } do %>
+                <i class="tf-ion-android-delete"></i> Delete
+              <% end %>
+            </li>
+          </ol>
+        </div>
+      <% end %>
       <!-- END OF VALIDATE BLOCK -->
     </div>
 
