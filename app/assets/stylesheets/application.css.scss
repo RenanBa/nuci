@@ -54,8 +54,9 @@
     15.3 Social Icons
   16.Footer
 
-
 -------------------------------------------------------------------*/
+
+
 /*=== MEDIA QUERY ===*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500");
 body {
@@ -257,6 +258,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .title {
+  margin: auto;
   padding: 20px 0 30px;
 }
 
