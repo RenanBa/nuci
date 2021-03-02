@@ -17,8 +17,13 @@
             <% end %>
           </li>
           <li>
+            <%= link_to new_product_path do %>
+              <i class="tf-ion-plus-round"></i> New Product
+            <% end %>
+          </li>
+          <li>
             <%= link_to @product, method: :delete, data: { confirm: 'Ara you sure?' } do %>
-              Delete <i class="tf-ion-android-delete"></i>
+              <i class="tf-ion-android-delete"></i> Delete
             <% end %>
           </li>
         </ol>
