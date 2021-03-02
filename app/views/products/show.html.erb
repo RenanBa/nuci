@@ -8,12 +8,22 @@
           <li class="active">Single Product</li>
         </ol>
       </div>
+      <!-- VALIDATE USER TO ACCESS THIS BLOCK -->
       <div class="col-md-6">
-        <!-- <ol class="product-pagination text-right">
-          <li><a href="blog-left-sidebar.html"><i class="tf-ion-ios-arrow-left"></i> Next </a></li>
-          <li><a href="blog-left-sidebar.html">Preview <i class="tf-ion-ios-arrow-right"></i></a></li>
-        </ol> -->
+        <ol class="product-update text-right">
+          <li>
+            <%= link_to edit_product_path(@product) do %>
+              <i class="tf-ion-edit"></i> Edit
+            <% end %>
+          </li>
+          <li>
+            <%= link_to @product, method: :delete, data: { confirm: 'Ara you sure?' } do %>
+              Delete <i class="tf-ion-android-delete"></i>
+            <% end %>
+          </li>
+        </ol>
       </div>
+      <!-- END OF VALIDATE BLOCK -->
     </div>
     <div class="row mt-20">
       <div class="col-md-5">
