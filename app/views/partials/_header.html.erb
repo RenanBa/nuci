@@ -152,14 +152,17 @@
                   <ul>
                     <li class="dropdown-header">Utility</li>
                     <li role="separator" class="divider"></li>
-                    <li>
-                      <%= link_to "Login Page", new_user_session_path %>
-                    </li>
-                    <li>
-                      <%= link_to "Signin Page", new_user_registration_path %>
-                    </li>
-                    <li><a href="forget-password.html">Forget Password</a></li>
-
+                    <% if user_signed_in? %>
+                      <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+                    <% else %>
+                      <li>
+                        <%= link_to "Log In Page", new_user_session_path %>
+                      </li>
+                      <li>
+                        <%= link_to "Sign In Page", new_user_registration_path %>
+                      </li>
+                      <li><a href="forget-password.html">Forget Password</a></li>
+                    <% end %>
                   </ul>
                 </div>
               </div> <!-- / .row -->
