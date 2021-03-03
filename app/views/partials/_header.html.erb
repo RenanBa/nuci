@@ -141,7 +141,7 @@
                   <ul>
                     <li class="dropdown-header">Pages</li>
                     <li role="separator" class="divider"></li>
-                    <li><%= link_to "Products", :controller => "products", :action => "index" %></li>
+                    <li><%= link_to "Products", products_path %></li>
                     <li><a href="checkout.html">Checkout</a></li>
                     <li><a href="cart.html">Cart</a></li>
                   </ul>
@@ -152,10 +152,18 @@
                   <ul>
                     <li class="dropdown-header">Utility</li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="login.html">Login Page</a></li>
-                    <li><a href="signin.html">Signin Page</a></li>
-                    <li><a href="forget-password.html">Forget Password</a></li>
-
+                    <% if user_signed_in? %>
+                      <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+                    <% else %>
+                      <li>
+                        <%= link_to "Log In Page", new_user_session_path %>
+                      </li>
+                      <li>
+                        <%= link_to "Sign In Page", new_user_registration_path %>
+                      </li>
+                      <li><%= link_to "Forget Password", new_user_password_path %></li>
+                      <!-- <li><a href="forget-password.html">Forget Password</a></li> -->
+                    <% end %>
                   </ul>
                 </div>
               </div> <!-- / .row -->
