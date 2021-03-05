@@ -1,3 +1,5 @@
 <% if can? :update, @product %>
   <%= render 'partials/product_form' %>
+<% else %>
+  <%= render 'notallowed' %>
 <% end %>
