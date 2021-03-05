@@ -1,7 +1,7 @@
 <section class="signin-page account">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 offset-3">
+      <div class="col-md-6 mx-auto">
         <div class="block text-center">
           <a class="logo" href="index.html">
             <!-- <img src="images/logo.png" alt=""> -->
@@ -16,13 +16,13 @@
             </div>
 
             <div class="text-center">
-              <%= f.submit "Send me reset password instructions", :class => "btn btn-main text-center" %>
+              <%= f.submit "Reset password", :class => "btn btn-main text-center" %>
             </div>
           <% end %>
 
           <p class="mt-20">
             New in this site? <%= link_to " Create New Account", new_registration_path(resource_name) %> </br>
-            Already hava an account? <%= link_to " Log in", new_session_path(resource_name) %>
+            Already have an account? <%= link_to " Log in", new_session_path(resource_name) %>
           </p>
         </div>
       </div>
