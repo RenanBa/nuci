@@ -6,6 +6,7 @@
 
 # Ignore figaro application.yml
 /config/application.yml
+config/cloudinary.yml
 
 # Ignore bundler config.
 /.bundle
