@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  post 'add_to_cart' => 'cart#add_to_cart'
+  get 'view_order' => 'cart#view_order'
+  get 'checkout' => 'cart#checkout'
+  get 'remove_from_cart' => 'cart#remove_from_cart'
+  get 'order_complete' => 'cart#order_complete'
+  get 'edit_line_item' => 'cart#edit_line_item'
+
   resources :orders
   resources :line_items
 
