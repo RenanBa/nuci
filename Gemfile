@@ -28,6 +28,9 @@ gem 'cancancan'
 
 gem 'figaro'
 
+# Use Cloudinary to upload and manage image files
+gem 'cloudinary'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

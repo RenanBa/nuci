@@ -1,3 +1,4 @@
+
 <div class="container">
 <%= form_for(@product) do |f| %>
   <% if @product.errors.any? %>
@@ -43,14 +44,10 @@
           <div class='carousel-outer'>
             <!-- me art lab slider -->
             <div class='carousel-inner '>
-              <div class='item active'>
+              <div class='item active' id="new_image_url">
                 <% if @product.image_url %>
                   <%= image_tag(image_path(@product.image_url)) %>
                 <% end %>
-              </div>
-              <div class="form-group">
-                <strong>Upload Image:</strong>
-                <%=f.file_field :image_url %>
               </div>
               <!-- <div class='item'>
                 <img src='images/shop/single-products/product-2.jpg' alt='' data-zoom-image="images/shop/single-products/product-2.jpg" />
@@ -121,6 +118,27 @@
     </div>
   </div>
 
+  <div>
+    <button id="upload_widget" class="cloudinary-button">Upload files</button>
+      <script type="text/javascript">
+
+        var myWidget = cloudinary.createUploadWidget({
+          cloudName: 'nuci',
+          uploadPreset: 'product'}, (error, result) => {
+            if (!error && result && result.event === "success") {
+              console.log('Done! Here is the image info: ', result.info);
+              document.getElementById("product_image_url").innerHTML = result.info.secure_url;
+              document.getElementById("new_image_url").innerHTML = "<img src='"+result.info.secure_url+"'/>";
+            }
+          }
+        )
+
+        document.getElementById("upload_widget").addEventListener("click", function(e){
+            e.preventDefault();
+            myWidget.open();
+          }, false);
+      </script>
+  </div>
 
 <% end %>
 </div>
