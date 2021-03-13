@@ -7,8 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-item = 1
-5.times {
+
+
+categories = ["Necklaces", "Bracelets", "Jewelries", "Earrings", "Pendants"]
+
+categories.each_with_index do |category, ind|
+    ind += 1
+
+    cat = Category.create(name: category)
     product = Product.create(
         name: "Neckless",
         size: "M",
@@ -17,8 +23,7 @@ item = 1
         color: "Red",
         description: "Product created on seed file for testing purpose",
         rating: 8,
-        image_url: "shop/products/product-"+item.to_s+".jpg",
-        category_id: "Jewellery"
+        image_url: "shop/products/product-"+ind.to_s+".jpg",
+        category_id: cat.id
     )
-    item = item.to_i + 1
-}
+end
