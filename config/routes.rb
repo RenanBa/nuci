@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   get 'view_order' => 'cart#view_order'
   get 'checkout' => 'cart#checkout'
   get 'remove_from_cart' => 'cart#remove_from_cart'
-  get 'order_complete' => 'cart#order_complete'
-  get 'edit_line_item' => 'cart#edit_line_item'
+  post 'order_complete' => 'cart#order_complete'
+  post 'edit_line_item' => 'cart#edit_line_item'
 
   resources :orders
   resources :line_items
