@@ -28,10 +28,10 @@ ActiveRecord::Schema.define(version: 2021_03_13_003103) do
     t.integer "order_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "costumer_key"
+    t.string "customer_key"
   end
 
-  create_table "oders", force: :cascade do |t|
+  create_table "orders", force: :cascade do |t|
     t.decimal "subtotal"
     t.decimal "sales_tax"
     t.decimal "grand_total"

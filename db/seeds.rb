@@ -19,7 +19,7 @@ categories.each_with_index do |category, ind|
         name: "Neckless",
         size: "M",
         price: 5.0,
-        quantity: 3,
+        quantity: 30,
         color: "Red",
         description: "Product created on seed file for testing purpose",
         rating: 8,

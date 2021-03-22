@@ -3,4 +3,3 @@ class AddThingToLineItems < ActiveRecord::Migration[6.1]
     add_column :line_items, :customer_key, :string
   end
 end
-`
