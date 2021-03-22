@@ -47,7 +47,12 @@
                 <p class="product-short-description">
                   <%= product.description %>
                 </p>
-                <a href="cart.html" class="btn btn-main">Add To Cart</a>
+                <%= form_tag(add_to_cart_path) do %>
+                  <%= hidden_field_tag :product_id, product.id %>
+
+                  <%= submit_tag "Add To Cart", :class => "btn btn-main"%>
+                <% end %>
+
                 <%= link_to "View Product Details", product, :class => "btn btn-transparent"%>
               </div>
             </div>
